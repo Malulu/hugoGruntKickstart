@@ -7,7 +7,7 @@
             {{ range .Data.Pages }}
                 {{if eq .Params.category "research" }}
                     <div class="portfolio_item col-md-4 col-sx-12">
-                        <div class="inner" style="background-image:url('{{.Site.BaseURL}}img/{{ replace .Params.image " ." " _1024." }}') ">
+                        <div class="inner" style="background-image:url('{{.Site.BaseURL}}/img/{{ replace .Params.image " ." " _1024." }}') ">
 
                             <a href="{{ .Permalink }}">
                                 <div class="portfolio_item_overlay">
