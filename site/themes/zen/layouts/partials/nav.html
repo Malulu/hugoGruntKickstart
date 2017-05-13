@@ -2,26 +2,18 @@
     <div class="container">
 
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand page-scroll" href="{{ .Site.BaseURL }}#page-top">{{ with .Site.Params.navigation.brand }}{{ . }}{{ end }}</a>
-        </div>
+            <a class="navbar-brand page-scroll" href="{{ .Site.BaseURL }}#page-top">
+              <h1>
+                {{ with .Site.Params.navigation.brand }}{{ . }}{{ end }}
+              </h1>
+              <h2>
+                {{ with .Site.Params.navigation.subtitle }}{{ . }}{{ end }}
+              </h2>
+            </a>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-
-              {{ range .Site.Params.navigation.links }}
-                <li>
-                    <a class="page-scroll" href="{{ .Site.BaseURL }} {{ .link }}">
-                      {{ .name }}
-                    </a>
-                </li>
-              {{end}}
-            </ul>
+            <div class="about">
+              <h1>+</h1>
+            </div>
         </div>
     </div>
 </nav>

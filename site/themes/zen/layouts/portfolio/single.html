@@ -1,0 +1,64 @@
+{{ partial "header.html" . }}
+{{ partial "nav.html" .}}
+<div class="mainContent">
+{{ partial "about" .}}
+
+    <div id="single-project" class="scrolling-content">
+
+        <!-- <div class="title container">
+            <h1>
+                {{ $.Title }}
+            </h1>
+        </div> -->
+
+        <div class="container">
+
+            <!-- <div class="row project-info">
+                <div class="title">
+
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-md-9 ">
+                    <div id="project-header" class="fill">
+                        <img src="{{$.Site.BaseURL}}img/{{.Params.image}}" class="img-responsive">
+                    </div>
+                </div>
+                <div class="col-md-3">
+
+                    <div class="attributes">
+
+                        <h3 class="title">{{.Title}}</h3>
+
+                        <h5>Year:</h5>
+
+                        <div class="year">
+                            <span class="date">{{ .Date.Format "2006" }}</span>
+                        </div>
+
+                        <div class="tags">
+                            <h5>filed under:</h5>
+                                <span class="tag">
+                                  {{ .Params.categoty }}
+                                </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row content">
+                <div class="col-md-9">
+                    {{.Content}}
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+</div>
+
+{{ partial "scripts.html" . }}
+{{ partial "footer.html" . }}

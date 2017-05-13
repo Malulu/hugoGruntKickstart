@@ -1,18 +1,11 @@
 @import "bootstrap/bootstrap.less";
-@import "../css/aos.css";
-@import "font-awesome/less/font-awesome.less";
-
-//colors
-
+@import "font-awesome/less/font-awesome.less"; //colors
 @cyan: #34BCEF;
 @magenta: #E0107C;
 @dark-gray: #3F4346;
 @light-gray: #EFEFEF;
 @white: #fff;
-@rat: #9B928C;
-
-
-// Font-Size
+@rat: #9B928C; // Font-Size
 @base-font-size: 1em; // Line-Height
 @base-line-height: 1.5;
 @header-line-height: 1.25; //sizes
@@ -47,6 +40,7 @@ h2,
 h3,
 h4,
 h5 {
+    font-family: 'Hind', sans-serif;
 
     a:focus,
     a:hover {
@@ -56,54 +50,198 @@ h5 {
 }
 
 h1 {
+    color: 0;
+    font-weight: bold;
     //  font-size: @base-font-size*3;
     @media @mq-medium {
-        font-size: @base-font-size*3;
+        font-size: @base-font-size*1.5;
     }
     @media @mq-large {
-        font-size: @base-font-size*3;
+        font-size: @base-font-size*1.5;
     }
     @media @mq-xlarge {
-        font-size: @base-font-size*5;
+        font-size: @base-font-size*1.8;
     }
     @media @mq-xxlarge {
-        font-size: @base-font-size*8;
+        font-size: @base-font-size*2;
     }
 }
 
 h2 {
+    font-weight: lighter;
     //  font-size: @base-font-size*3;
-    font-size: @base-font-size*2;
+    font-size: @base-font-size*1;
     @media @mq-medium {
-        font-size: @base-font-size*2;
+        font-size: @base-font-size*.9;
     }
-    @media @mq-large {
-        font-size: @base-font-size*2.8;
-    }
-    @media @mq-xlarge {
-        font-size: @base-font-size*3.5;
-    }
-    @media @mq-xxlarge {
-        font-size: @base-font-size*4;
+}
+
+h3 {
+    font-weight: bold;
+    //  font-size: @base-font-size*3;
+    font-size: @base-font-size*1;
+    @media @mq-medium {
+        font-size: @base-font-size*1;
     }
 }
 
 p {
-    font-size: @base-font-size*1.5;
+    font-size: @base-font-size*1;
     @media @mq-medium {
-        font-size: @base-font-size*1.5;
+        font-size: @base-font-size*1;
     }
     @media @mq-large {
-        font-size: @base-font-size*1.5;
+        font-size: @base-font-size*1;
     }
     @media @mq-xlarge {
-        font-size: @base-font-size*1.5;
+        font-size: @base-font-size*1;
+
+        .container {
+            width: 960px;
+        }
     }
     @media @mq-xxlarge {
         font-size: @base-font-size*2;
+
+        .container {
+            width: 960px;
+        }
+    }
+}
+@media @mq-medium {
+    .container {
+        width: 960px;
+    }
+}
+@media @mq-large {
+    .container {
+        width: 960px;
+    }
+}
+@media @mq-xlarge {
+    .container {
+        width: 960px;
+    }
+}
+@media @mq-xxlarge {
+    .container {
+        width: 960px;
     }
 }
 
-a:hover, a:focus{
-  text-decoration: none;
+body {
+    font-family: 'Hind', sans-serif;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-bottom: none;
+    background-color: white;
+    height: 8em;
+    width: 100%;
+
+    .navbar-header {
+        width: 100%;
+    }
+
+    h1 {
+        margin-bottom: 2px;
+        color: black;
+    }
+
+    h2 {
+        margin-top: 0;
+        color: black;
+    }
+
+    .about {
+        float: right;
+        padding-top: 23px;
+
+        h1 {
+            font-size: 2.4em;
+            -webkit-transition: all .5s; /* Safari */
+            transition: all .5s;
+        }
+
+
+
+        &.rotated {
+            h1 {
+                -ms-transform: rotate(45deg);
+                /* IE 9 */
+                -webkit-transform: rotate(45deg);
+                /* Chrome, Safari, Opera */
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.mainContent {
+    margin-top: 10em;
+}
+
+#about-box {
+    font-size: 1.2em;
+    padding: 5em;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    .middle {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.portfolio_item {
+    padding: 10px;
+
+    .inner {
+        background-size: cover;
+        height: 230px;
+        background-position: center;
+
+        .portfolio_item_overlay {
+            width: 100%;
+            height: 100%;
+
+            .title {
+                //color: transparent;
+                color: transparent;
+                height: 100%;
+                position: relative;
+
+                h3 {
+                    top: 50%;
+                    position: absolute;
+                    width: 100%;
+                    transform: translateY(-50%);
+                    text-align: center;
+                }
+            }
+
+            &:hover {
+                background-color: rgba(10, 10, 10, 0.6);
+
+                .title {
+                    color: white;
+                }
+            }
+        }
+    }
 }

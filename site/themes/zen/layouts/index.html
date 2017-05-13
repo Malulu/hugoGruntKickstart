@@ -1,6 +1,10 @@
 {{ partial "header.html" .}}
 {{ partial "nav.html" .}}
 
-  {{ partial "hero.html" .}}
+<div class="mainContent">
+  {{partial "about" .}}
+  {{ partial "researchGrid" .}}
+  {{ partial "graphicDesignGrid" .}}
+</div>
 
 {{partial "footer.html" .}}

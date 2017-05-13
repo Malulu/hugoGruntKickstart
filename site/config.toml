@@ -10,19 +10,7 @@ theme ="zen"
 
 	# All blog posts are defined in their own files.
 
-	name = "your site name"
-	claim = "we have what you want"
-
   # Navigation
 	[params.navigation]
-		brand = "brand"
-
-	[params.navigation.links]
-
-  [params.navigation.links.blog]
-		name     = "blog"
-		link = "/blog"
-
-  [params.navigation.links.services]
-  	name     = "services"
-  	link = "#services"
+	brand = "maria luce lupetti"
+  subtitle = "DESIGN RESEARCHER"

@@ -1,0 +1,31 @@
+<section id="research">
+    <div class="container">
+        <h3 class="category">graphic design</h3>
+        <div class="row">
+
+            {{ range .Data.Pages }}
+                {{if eq .Params.category "graphicDesign" }}
+                    <div class="portfolio_item col-md-3 col-sx-12">
+                        <div class="inner" style="background-image:url('{{.Site.BaseURL}}img/{{ replace .Params.image " ." " _1024." }}') ">
+
+                            <a href="{{ .Permalink }}">
+                                <div class="portfolio_item_overlay">
+                                    <div class="inner">
+                                        <div class="title">
+                                            <h3>{{.Title}}</h3>
+                                        </div>
+                                        <div class="subtitle">
+                                            {{.Params.subtitle}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+
+</section>
